@@ -1,13 +1,85 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 98%;
+  border: 0.1vw solid black;
+  border-radius: 0.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vw;
+  padding: 1vw;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2vw;
+  background-color: slateblue;
+  color: white;
+}
+
+header div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  width: 3vw;
+  height: 3vw;
+}
+
+.generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 98%;
+}
+
+.options {
+  border: 0.1vw solid black;
+  border-radius: 0.5vw;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: scroll;
+  background-color: rgb(40, 167, 40);
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+.option-img {
+  height: 6vw;
+  width: 6vw;
+  margin: 0.5vw;
+  border: 0.1vw solid black;
+  border-radius: 0.5vw;
+  cursor: pointer;
+}
+
+.frame {
+  border: 0.3vw solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;;
+}
+
+.frame img {
+  height: 27vw;
+}
+
+.selected {
+  border: 0.3vw solid greenyellow;
 }
