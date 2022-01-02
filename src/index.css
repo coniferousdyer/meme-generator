@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 * {
   box-sizing: border-box;
@@ -71,15 +72,83 @@ header img {
 
 .frame {
   border: 0.3vw solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;;
 }
 
 .frame img {
   height: 27vw;
 }
 
+.frame .empty-template {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2vw;
+  height: 27vw;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .selected {
   border: 0.3vw solid greenyellow;
+}
+
+.text-selected {
+  border: 0.1vw solid black;
+}
+
+form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  margin: 1vw;
+  padding: 1vw;
+  border: 0.1vw solid black;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 0.5vw;
+  background-color: rgb(40, 167, 40);
+}
+
+form label {
+  color: white;
+}
+
+form input {
+  width: 98%;
+  height: 3vw;
+  border: 0.1vw solid black;
+  border-radius: 0.5vw;
+  margin: 0.5vw;
+  padding: 0.5vw;
+  font-size: 1.2vw;
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  color: black;
+}
+
+form input[type='text'] {
+  outline: none;
+}
+
+form input[type='submit'] {
+  cursor: pointer;
+}
+
+form input[type='submit']:hover {
+  background-color: rgb(194, 194, 194);
+}
+
+.react-draggable {
+  position: absolute;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Anton', sans-serif !important;
+  padding: 0.5vw;
+  overflow-wrap: break-word;
+  cursor: move;
 }

@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react"
 import Options from "./Options"
-import Form from "./Form"
+import AddText from "./AddText"
 import Frame from "./Frame"
 
 const Generator = () => {
     const [images, setImages] = useState([])
     const [selectedImage, setSelectedImage] = useState(null)
+    const [texts, setTexts] = useState([])
 
     // Fetch images from the API
     useEffect(() => {
@@ -29,14 +30,19 @@ const Generator = () => {
         toggleSelected(image.id)
     }
 
+    const addNewText = text => {
+        const id = texts.length + 1
+        setTexts([...texts, { id, ...text }])
+    }
+
     const toggleSelected = id => {
         setImages(images.map(image => (image.id === id ? { ...image, selected: true } : { ...image, selected: false })))
     }
 
     return (
         <div className="generator">
-            <Form />
-            <Frame selectedImage={selectedImage} />
+            <AddText addNewText={addNewText} />
+            <Frame selectedImage={selectedImage} texts={texts} />
             <Options images={images} selectImage={handleImageClick} />
         </div>
     )
