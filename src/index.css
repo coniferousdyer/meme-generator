@@ -182,3 +182,71 @@ form input[type='submit']:hover {
 #download-button:hover {
   background-color: rgb(26, 121, 26);
 }
+
+@media only screen and (max-width: 480px) {
+  header {
+    font-size: 4vw;
+  }
+
+  header img {
+    width: 8vw;
+    height: 8vw;
+    margin-top: 2vw;
+  }
+
+  .frame img {
+    height: 50vw;
+  }
+
+  .frame .empty-template {
+    font-size: 4vw;
+    height: 40vw;
+    width: 80vw;
+  }
+
+  form {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    width: 80%;
+  }
+
+  form input {
+    margin: 2vw;
+  }
+  
+  form input[type='text'] {
+    font-size: 5vw;
+    padding: 5vw;
+  }
+
+  form input[type='color'] {
+    height: 8vw;
+  }
+
+  form input[type='submit'] {
+    font-size: 5vw;
+    height: 10vw;
+  }
+
+  #download-button {
+    font-size: 5vw;
+    height: 10vw;
+    width: 50%;
+  }
+
+  .options {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+
+  .option-img {
+    height: 20vw;
+    width: 20vw;
+    margin: 1vw;
+  }
+
+  .react-draggable svg {
+    width: 5vw;
+    height: 5vw;
+  }
+}

@@ -25,7 +25,7 @@ cd meme-generator
 npm install
 ```
 
-3. Run the application.
+3. Run the application (in development mode).
 ```bash
 npm start
 ```
@@ -99,3 +99,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Future Plans
+
+* Add features to change the size and color of the text after it has been generated.
+
+Contributions are always welcome!
