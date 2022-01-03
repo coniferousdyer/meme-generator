@@ -35,6 +35,10 @@ const Generator = () => {
         setTexts([...texts, { id, ...text }])
     }
 
+    const deleteText = id => {
+        setTexts(texts.filter(text => text.id !== id))
+    }
+
     const toggleSelected = id => {
         setImages(images.map(image => (image.id === id ? { ...image, selected: true } : { ...image, selected: false })))
     }
@@ -42,7 +46,7 @@ const Generator = () => {
     return (
         <div className="generator">
             <AddText addNewText={addNewText} />
-            <Frame selectedImage={selectedImage} texts={texts} />
+            <Frame selectedImage={selectedImage} texts={texts} onDelete={deleteText} />
             <Options images={images} selectImage={handleImageClick} />
         </div>
     )

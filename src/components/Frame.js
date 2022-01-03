@@ -1,6 +1,6 @@
 import Text from "./Text"
 
-const Frame = ({ selectedImage, texts }) => {
+const Frame = ({ selectedImage, texts, onDelete }) => {
     return (
         <div className="frame">
             {
@@ -11,7 +11,7 @@ const Frame = ({ selectedImage, texts }) => {
                     </div>
             }
             {texts.map(text => (
-                <Text key={text.id} text={text} />
+                <Text key={text.id} text={text} onDelete={onDelete} />
             ))}
         </div>
     )

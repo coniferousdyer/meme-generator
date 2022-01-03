@@ -152,3 +152,15 @@ form input[type='submit']:hover {
   overflow-wrap: break-word;
   cursor: move;
 }
+
+.react-draggable div {
+  position: relative;
+}
+
+.react-draggable svg {
+  width: 1.5vw;
+  height: 1.5vw;
+  position: absolute;
+  right: -1.5vw;
+  top: -1.5vw;
+}
