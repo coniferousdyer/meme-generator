@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import html2canvas from 'html2canvas';
 import Options from "./Options"
 import AddText from "./AddText"
 import Frame from "./Frame"
@@ -7,6 +8,16 @@ const Generator = () => {
     const [images, setImages] = useState([])
     const [selectedImage, setSelectedImage] = useState(null)
     const [texts, setTexts] = useState([])
+
+    // Download the image
+    const handleDownloadImage = () => {
+        html2canvas(document.querySelector(".frame"), { allowTaint: true, useCORS: true }).then(canvas => {
+            const link = document.createElement('a')
+            link.href = canvas.toDataURL()
+            link.download = 'meme.png'
+            link.click()
+        });
+    }
 
     // Fetch images from the API
     useEffect(() => {
@@ -47,6 +58,7 @@ const Generator = () => {
         <div className="generator">
             <AddText addNewText={addNewText} />
             <Frame selectedImage={selectedImage} texts={texts} onDelete={deleteText} />
+            <button id="download-button" onClick={handleDownloadImage}>Download</button>
             <Options images={images} selectImage={handleImageClick} />
         </div>
     )

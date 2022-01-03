@@ -71,7 +71,8 @@ header img {
 }
 
 .frame {
-  border: 0.3vw solid black;
+  margin-top: 1vw;
+  border: 0.1vw solid black;
 }
 
 .frame img {
@@ -141,7 +142,6 @@ form input[type='submit']:hover {
 }
 
 .react-draggable {
-  position: absolute;
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -163,4 +163,22 @@ form input[type='submit']:hover {
   position: absolute;
   right: -1.5vw;
   top: -1.5vw;
+}
+
+#download-button {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 1.2vw;
+  width: 10vw;
+  height: 3vw;
+  border: 0.1vw solid black;
+  border-radius: 0.5vw;
+  background-color: rgb(40, 167, 40);
+  cursor: pointer;
+}
+
+#download-button:hover {
+  background-color: rgb(26, 121, 26);
 }

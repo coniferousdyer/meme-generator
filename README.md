@@ -1,8 +1,39 @@
-# Getting Started with Create React App
+# Meme Generator
+
+Say hello to the Meme Generator: your tool to create your very own memes! Create memes from a variety of templates, add your text, download them and share them with your friends!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Features
+
+* Choose from a variety of the most popular meme templates.
+* Add your own text, customize the size and color, and place it wherever you like, by simple drag-and-drop.
+* Download your meme as a PNG.
+
+<br>
+<p align="center">
+<img src="public/preview.png">
+</p>
+
+## Setup and Installation
+
+1. Clone the repository.
+
+2. Change the working directory to the cloned repository and install the required dependencies.
+```bash
+cd meme-generator
+npm install
+```
+
+3. Run the application.
+```bash
+npm start
+```
+The application will be available at http://localhost:3000.
+
+The following section provides detailed instructions on the different ways you can run the application according to your needs.
+
+# Available Scripts
 
 In the project directory, you can run:
 
