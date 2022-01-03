@@ -1,8 +1,10 @@
 import { useState, useRef, useEffect } from 'react'
 import { Rnd } from 'react-rnd'
 import { FaTimes } from 'react-icons/fa';
+import ContentEditable from 'react-contenteditable'
 
 const Text = ({ text, onDelete }) => {
+    const [textValue, setTextValue] = useState(text.text)
     const [selected, setSelected] = useState(false)
     const ref = useRef(null)
 
@@ -40,9 +42,19 @@ const Text = ({ text, onDelete }) => {
         fontSize: `${text.size}vw`,
     }
 
+    const handleChange = event => {
+        setTextValue(event.target.value)
+      };
+
     return (
         <Rnd>
-            <div ref={ref} style={style}>{text.text}
+            <div ref={ref} style={style}>
+                <ContentEditable
+                    html={textValue}
+                    onChange={handleChange}
+                    disabled={false}
+                    spellCheck={false}
+                />
                 {selected ? <FaTimes style={{ color: "red", cursor: "pointer" }} onClick={() => onDelete(text.id)} /> : null}
             </div>
         </Rnd>
